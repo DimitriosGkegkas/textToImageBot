@@ -1,0 +1,68 @@
+@import "../../vars.less";
+
+.doubleCard {
+  padding: 32px;
+  //font-family: monospace;
+  margin-bottom: 24px;
+
+  .iconWarp {
+    font-size: 54px;
+    float: left;
+  }
+
+  .content {
+    width: 100%;
+    padding-left: 78px;
+    .title {
+      line-height: 16px;
+      font-size: 16px;
+      margin-bottom: 8px;
+      height: 16px;
+      .text-overflow();
+    }
+
+    .number {
+      line-height: 32px;
+      font-size: 24px;
+      height: 32px;
+      .text-overflow();
+    }
+  }
+}
+
+
+.doubleCardLines {
+  margin-bottom: 12px;
+  box-shadow: 3px 3px 3px #eee;
+
+  .flexBox {
+    display: flex;
+  }
+
+  .iconWarp {
+    color: #fff;
+    font-size: 28px;
+    padding: 30px 25px 20px 25px;
+  }
+
+  .content {
+    flex: 1;
+    padding: 16px;
+
+
+    .title {
+      line-height: 16px;
+      font-size: 16px;
+      margin-bottom: 8px;
+      height: 16px;
+      .text-overflow();
+    }
+
+    .number {
+      line-height: 16px;
+      font-size: 12px;
+      height: 16px;
+      .text-overflow();
+    }
+  }
+}

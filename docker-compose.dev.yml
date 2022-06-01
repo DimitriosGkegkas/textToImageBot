@@ -1,0 +1,50 @@
+version: "3.1"
+services:
+    back-office:
+        image: strapi/strapi
+        restart: unless-stopped
+        env_file: .env
+        environment:
+            DATABASE_CLIENT: mongo
+            DATABASE_NAME: ${DATABASE_NAME}
+            DATABASE_HOST: ${DATABASE_HOST}
+            DATABASE_USERNAME: ${DATABASE_USERNAME}
+            DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+            DATABASE_SRV: 'true'
+            DATABASE_SSL: 'true'
+            PORT: 1337
+        volumes:
+            - ./back-office:/srv/app
+    bot:
+        build:
+            context: ./bot
+            dockerfile: Dockerfile
+        volumes:
+            - ./bot/src:/bot/src
+            - ./nodemon.json:/bot/nodemon.json
+        environment:
+            VIBER_AUTH_TOKEN: ${VIBER_AUTH_TOKEN}
+            WEBHOOK_DOMAIN: ${WEBHOOK_DOMAIN}
+            MONGODB_URI: ${MONGODB_URI}
+            PORT: 3000
+        command: yarn run dev
+    panel:
+        build:
+            context: ./panel
+            dockerfile: Dockerfile
+        volumes:
+            - ./panel/src:/panel/src
+        environment:
+            PORT: 8000
+        command: npm run start
+    nginx:
+        restart: always
+        build:
+            dockerfile: Dockerfile
+            context: ./nginx
+        ports:
+            - '${PORT}:80'
+        depends_on:
+            - panel
+            - back-office
+            - bot

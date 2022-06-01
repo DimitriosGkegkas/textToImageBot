@@ -1,0 +1,29 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+.ant-card-meta-title {
+  white-space: pre-line ! important;
+  word-wrap: break-word;
+}
+
+.ant-card-meta-subtitle {
+  white-space: pre-line ! important;
+  word-wrap: break-word;
+}
+
+.card_stats {
+  margin: 20px 10px 0px 0px;
+}
+
+.btn_tag:hover {
+  background-color: #c93241 ! important;
+  color: white ! important;
+  content: 'ADD' ! important;
+}
+
+.btn_tag_delete {
+  color:white
+}

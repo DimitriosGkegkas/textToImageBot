@@ -1,0 +1,14 @@
+VIBER_AUTH_TOKEN= # Auth Token Linking to a Viber Bot account! Create one here https://partners.viber.com/account/create-bot-account
+WEBHOOK_DOMAIN= # Public URL for the bot app. It is the public domain pointing to the port of the app plus the '/bot'
+PORT= # Port where the app will run
+
+# DATABASE connection
+
+# String Format
+MONGODB_URI= The string to connect to a mongodb server
+
+# Arguments format
+DATABASE_NAME=
+DATABASE_HOST=
+DATABASE_USERNAME=
+DATABASE_PASSWORD=

@@ -1,0 +1,14 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+.ant-card-meta-title {
+  white-space: "pre-line";
+  word-wrap: "break-word";
+}
+
+.card_stats {
+  margin: 20px 10px 0px 0px;
+}

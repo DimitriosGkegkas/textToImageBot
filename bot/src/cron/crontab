@@ -1,0 +1,1 @@
+0 */1 * * * /usr/bin/docker exec -t cafe-feminino_bot_1 yarn run stats > /home/dimitrisgk/logs/tasks.log 2>&1
