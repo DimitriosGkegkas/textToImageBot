@@ -1,0 +1,56 @@
+{
+    "name": "dixons-demo-bot",
+    "version": "1.0.0",
+    "main": "./dist/server.js",
+    "description": "This is a viber bot for meteo.gr.",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "yarn node ./dist/server.js",
+        "build": "yarn tsc",
+        "init": "node dist/scripts/init.js",
+        "stats": "node dist/cron/cronStatistics.js",
+        "dev": "nodemon",
+        "lint": "yarn eslint '*/**/*.ts' --quiet --fix -c .eslintrc.js --ignore-path .eslintignore",
+        "precommit": "yarn run lint"
+    },
+    "dependencies": {
+        "@ebenos2/framework": "^4.0.1",
+        "@ebenos2/viber-adapter": "^4.0.8",
+        "@ebenos2/viber-elements": "^4.0.2",
+        "@types/body-parser": "^1.19.2",
+        "@types/cors": "^2.8.12",
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.13",
+        "@types/jsonwebtoken": "^8.5.6",
+        "@types/lodash": "^4.14.168",
+        "@types/node-fetch": "^2.5.10",
+        "@types/python-shell": "^1.0.3",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "geolib": "^3.3.3",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.1",
+        "node-fetch": "^2.6.1",
+        "python-shell": "^3.0.1"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
+        "eslint": "^7.24.0",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "express": "^4.17.1",
+        "mocha": "^8.3.2",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.2.1",
+        "ts-mocha": "^8.0.0",
+        "typescript": "^4.2.4"
+    },
+    "peerDependencies": {},
+    "engine": {
+        "node": "^14"
+    }
+}
